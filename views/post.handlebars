@@ -1,0 +1,23 @@
+<div class="card m-3 border-dark">
+
+    <div class="card-header bg-success">
+        <h5 class="text-center">{{post.post_title}}</h5>
+    </div>
+
+    <div class="card-body m-2">
+        <div class="card-text text-center">{{post.content}}</div>
+    </div>
+
+    <div class="card-footer d-flex justify-content-between">
+        <a href="/newcomment"><button type="button" class="btn btn-success text-light">Add Comment</button></a>
+        author: {{post.user.username}}
+    </div>
+
+</div>
+<div class="row d-flex justify-content-center">
+    <div class="col-lg-6 col-mb-12">
+        {{#each comments as |comment|}}
+        {{> post-details}}
+        {{/each}}
+    </div>
+</div>

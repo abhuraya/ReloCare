@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS ReloCare_db;
+CREATE DATABASE ReloCare_db;
